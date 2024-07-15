@@ -26,17 +26,19 @@ from functions import elemental_bonus
 #Construtor de Personagem
 def construc_char(char_Name,char_LV,char_element,char_ELMB,char_Atk,char_CRTDMG,char_CRTRATE):
     #Verificando Entrada de Valores de Nome e Level
-    if (char_Name == "string" and char_LV > 0):
+    if (char_Name != None and char_LV > 0):
         print(f"-- {char_Name} Skills [LV{char_LV}] --")
     else:
         print("Error: Invalid Level or Name,Try Again")
+        exit
     
     #Verificando o valor do Tipo de Elemento
     if character_element in ["Physical","Fire","Ice","Imaginary","Quantum","Wind","Lightning"]:
-        print(f"-- Element: {char_element} --")
+        print(f"-- Element: {char_element} --\n")
 
     else:
         print("invalid Element,Try Again")
+        exit
 
     #Verificando a Entrada dos Valores de Ataque e Bonus Elemental
     if char_Atk > 0 and char_ELMB > 0:
@@ -70,6 +72,7 @@ def construc_char(char_Name,char_LV,char_element,char_ELMB,char_Atk,char_CRTDMG,
         char_ultimate_skill(char_Atk)
     else:
         print("Invalid ATK or Elemental Bonus")
+        exit
 
 #ATIVAÇÂO DE CONSTRUÇÂO
 construc_char(character_name,character_lv,character_element,elementalBonus,character_atk,crtDMG,crtRATE)

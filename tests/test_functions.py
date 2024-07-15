@@ -1,6 +1,6 @@
 #Importando Componentes de 'functions.py'
-from Main.functions import critical_Damage
-from Main.functions import elemental_bonus
+from functions import critical_Damage
+from functions import elemental_bonus
 
 #Variaveis Para Testar as Funções
     #Dano Critico
