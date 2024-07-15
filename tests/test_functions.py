@@ -17,3 +17,4 @@ def test_crital_damage():
 #Testando Função de Calculo de Bonus Elemental
 def test_elemental_bonus():
     assert elemental_bonus(300,char_ELMB) == 390
+
