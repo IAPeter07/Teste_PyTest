@@ -27,6 +27,13 @@ def elemental_bonus(atk,Elemental_Bonus):
     dano = (atk + acr)
     return round(dano)
 
+    #Função de verificação de Entrada de Valores de Nome e Level
+def check_name_and_lv(name,lv):
+    if isinstance(name, str) and lv > 0:
+        print(f"-- {name} Skills [LV{lv}] --")
+    else:
+        print("Error: Invalid Level or Name,Try Again")
+
 #Testes de variaveis
  # Testando de bonus elemental
 def test_character_elemental_bonus():
@@ -59,3 +66,9 @@ def test_crital_damage():
 #Testando Função de Calculo de Bonus Elemental
 def test_elemental_bonus():
     assert elemental_bonus(dano,character_ELMB) == 2328
+
+#Testando Parte de Construtor (Checando nome e level do personagem)
+def test_check_name_and_lv():
+    assert check_name_and_lv("Nome",80) == "-- Nome Skills [LV80] --"
+    assert check_name_and_lv(1,1) == "Error: Invalid Level or Name,Try Again"
+    assert check_name_and_lv(1,"Nome") == "Error: Invalid Level or Name,Try Again"
