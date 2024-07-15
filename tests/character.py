@@ -40,7 +40,7 @@ def construct_char(char_Name,char_LV,char_element,char_ELMB,char_Atk,char_CRTDMG
 
     #Verificando a Entrada dos Valores de Ataque e Bonus Elemental
     def check_atk_and_ELMB(Atk,ELMB):
-        if Atk > 0 and ELMB > 0:
+        if isinstance(Atk,int) and Atk > 0 and ELMB > 0:
             def char_basic_skill(atk):
                 dano = ((atk * 50)/100)
                 #Aplicando Bonus Elemental
@@ -66,15 +66,14 @@ def construct_char(char_Name,char_LV,char_element,char_ELMB,char_Atk,char_CRTDMG
                 print(f"{char_Name} Ultimate Skill DMG: {round(danoE)} - [CRT]:{round(crt)}\n")
                             
             #ATIVAÇÂO DE SKILLS
-            char_basic_skill(char_Atk)
-            char_E_skill(char_Atk)
-            char_ultimate_skill(char_Atk)
+            char_basic_skill(Atk)
+            char_E_skill(Atk)
+            char_ultimate_skill(Atk)
         else:
             print("Error: Invalid ATK or Elemental Bonus")
     
     #ATIVANDO FUNCOES DE CONSTRUÇÃO
     check_name_and_lv(char_Name,char_LV)
     
-
 #ATIVAÇÂO DO CONSTRUTOR
 construct_char(character_name,character_lv,character_element,character_ELMB,character_atk,character_CRTDMG,character_CRTRATE)
