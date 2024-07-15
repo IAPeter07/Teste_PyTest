@@ -1,6 +1,6 @@
 #Variaveis Iniciais da Construção do Persoangem
     # Variavel de nome
-character_name = ("Kafka")
+character_name = ("Main Character")
     # Variavel de Level
 character_lv = (80)
     # Variavel de ataque 
