@@ -2,11 +2,11 @@
     # Variavel de nome
 character_name = "Main Character"
     # Variavel de Level
-character_lv = (80)
+character_lv = 80
     # Variavel de ataque 
-character_atk = (3000)
+character_atk = 3000
     # Variavel de Elemento 
-character_element = ("Lightning") 
+character_element = "Lightning"
     # Varaivel de Bonus Elemental
 character_ELMB = (55.2/100) #Inserir Valor em % para ser convertido em Decimal
     # Variavel de Taxa Critica
