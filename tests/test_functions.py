@@ -1,3 +1,7 @@
+#Testes Unitarios em Python Utilizando o Pytest
+#Utilizando Codigo Base "functions.py",para exemplares de Calculo
+#Utilização de Valores individuais exemplares para Calcular um Resultado esperado
+
 #Importando Componentes de 'functions.py'
 from functions import critical_Damage
 from functions import elemental_bonus

@@ -1,4 +1,4 @@
-#Variaveis Iniciais da Construção do Persoangem
+#Variaveis Iniciais da Construção do Personagem
     # Variavel de nome
 character_name = "Main Character"
     # Variavel de Level
@@ -40,7 +40,7 @@ def construct_char(char_Name,char_LV,char_element,char_ELMB,char_Atk,char_CRTDMG
 
     #Verificando a Entrada dos Valores de Ataque e Bonus Elemental
     def check_atk_and_ELMB(Atk,ELMB):
-        if isinstance(Atk,int) and Atk > 0 and ELMB > 0:
+        if isinstance(Atk,int) and Atk > 0 and ELMB >= 0:
             def char_basic_skill(atk):
                 dano = ((atk * 50)/100)
                 #Aplicando Bonus Elemental
